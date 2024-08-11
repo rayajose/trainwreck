@@ -9,16 +9,16 @@ public class SandBox {
 
 	public static void main(String[] args) {
 		
-		String game = "powerball";
-		//String pick5 = "pick5";
-		//String lotto = "lotto";
+		//String game = "powerball";
+		String game = "pick5";
+		//String game = "lotto";
 		
 		getLottoNumbers(game);
 	}
 
 	public static void getLottoNumbers(String game) {
 		
-		if (!(game.equals("pick4")|game.equals("pick4")|game.equals("pick4"))) {
+		if (!(game.equals("pick4")|game.equals("pick5")|game.equals("lotto"))) {
 			System.out.println(game + " is not a valid game type. Values must be pick4, pick5, or lotto.");
 			
 		}
