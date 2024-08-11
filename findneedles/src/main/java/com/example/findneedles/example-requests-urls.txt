@@ -1,0 +1,65 @@
+eclipse workspace:
+C:\Users\pdidd\eclipse-workspace\findneedles\src\main\java\com\example\findneedles
+
+POST: http://localhost:8080/api/post/needles
+good request:
+
+4 needles
+{"haystack":"Like finding a needle in a haystack","needles":["finding","needle","a","haystack"]}
+
+5 needles
+{"haystack":"Like finding a needle in a haystack","needles":["finding","needle","a","haystack","needles"]}
+
+
+bad request:
+{"haystack":"Like finding a needle in a haystack","needles":["finding","needle","a","haystack","needles","camel"]}
+
+
+GET: http://localhost:8080/api/get/needles
+good request:
+http://localhost:8080/api/get/needles?haystack=haystack&needles=haystack
+
+curl -s "http://localhost:8080/api/get/needles?haystack=haystack&needles=haystack"
+
+http://localhost:8080/api/get/needles?haystack=Like%20finding%20a%20needle%20in%20a%20haystack&needles=finding,needle,a,haystack
+
+curl -s "http://localhost:8080/api/get/needles?haystack=Like%20finding%20a%20needle%20in%20a%20haystack&needles=finding,needle,a,haystack"
+
+
+bad request:
+http://localhost:8080/api/get/needles?haystack=Like%20finding%20a%20needle%20in%20a%20haystack&needles=finding,needle,a,haystack,needles,camel
+
+curl -s "http://localhost:8080/api/get/needles?haystack=Like%20finding%20a%20needle%20in%20a%20haystack&needles=finding,needle,a,haystack,needles,camel"
+
+
+
+public static void findNeedles(String haystack, String[] needles) {
+
+		error if index is greater than 5
+		if (needles.length > 5) {
+			System.err.println("Too many words!");
+		}
+		
+		else {
+
+			int[] countArray = new int[needles.length];
+
+			
+			for (int i = 0; i < needles.length; i++) {
+				String[] words = haystack.split("[ \"\'\t\n\b\f\r]", 0);
+
+				
+				for (int j = 0; j < words.length; j++) {
+
+					if (words[j].compareTo(needles[i]) == 0) {
+						countArray[i]++;
+					}
+				}
+			}
+			for (int j = 0; j < needles.length; j++) {
+				System.out.println(needles[j] + ": " + countArray[j]);
+			}
+		}
+	}
+
+

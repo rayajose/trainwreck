@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.example.findneedles","c":"Finder","l":"Finder()","u":"%3Cinit%3E()"},{"p":"com.example.findneedles","c":"Finder","l":"findNeedles(String, String[])","u":"findNeedles(java.lang.String,java.lang.String[])"}];updateSearchResults();
