@@ -71,10 +71,3 @@ public class TesterFinder {
 	}
 
 }
-
-
-//
-//"needles": {
-//    "needle": "value",
-//    "count": "value"
-//  }
