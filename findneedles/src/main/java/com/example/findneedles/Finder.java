@@ -4,10 +4,12 @@ public class Finder {
 	
 	public static void findNeedles(String haystack, String[] needles) {
 
+		int maxCount = 5;
+		
 		// error if index is greater than 5
 		if (needles.length > 5) {
 			//System.err.println("Too many words!");
-			System.err.println("Too many words!"); 
+			System.err.println("The maximum number of needles is " + maxCount); 
 		}
 		// create int array with same index count as needles[]
 		else {
@@ -26,9 +28,9 @@ public class Finder {
 					}
 				}
 			}
-			for (int j = 0; j < needles.length; j++) {
-				System.out.println(needles[j] + ": " + countArray[j]);
-			}
+//			for (int j = 0; j < needles.length; j++) {
+//				System.out.println(needles[j] + ": " + countArray[j]);
+//			}
 		}
 	}
 

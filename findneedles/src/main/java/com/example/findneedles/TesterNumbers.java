@@ -5,7 +5,7 @@ import com.google.gson.Gson;
 import java.util.HashSet;
 import java.util.Set;
 
-public class SandBox {
+public class TesterNumbers {
 
 	public static void main(String[] args) {
 		
