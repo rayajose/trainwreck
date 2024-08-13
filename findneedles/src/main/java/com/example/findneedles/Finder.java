@@ -9,7 +9,7 @@ public class Finder {
 		// error if index is greater than 5
 		if (needles.length > 5) {
 			//System.err.println("Too many words!");
-			System.err.println("The maximum number of needles is " + maxCount); 
+			System.err.println("The maximum number of needles is " + maxCount + "."); 
 		}
 		// create int array with same index count as needles[]
 		else {
