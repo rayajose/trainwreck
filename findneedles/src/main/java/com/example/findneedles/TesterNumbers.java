@@ -67,20 +67,4 @@ public class TesterNumbers {
 	}
 	
 	
-
 }
-
-//public static void main(String[] args)
-//{
-//    // your code goes here
-//    HashSet<String> h = new HashSet<String>();
-//
-//    // Adding elements into HashSet using add()
-//    h.add("Geeks");
-//    h.add("for");
-//    h.add("Geeks");
-//
-//    // Iterating over hash set items
-//    for (String i : h) 
-//        System.out.println(i);        
-//}
